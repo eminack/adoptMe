@@ -27,6 +27,7 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds: apiBreeds }) => {
       const breedStrings = apiBreeds.map(({ name }) => name);
       setBreeds(breedStrings);
+      // eslint-disable-next-line no-console
     }, console.error);
   }, [animal, setBreeds, setBreed]);
 
